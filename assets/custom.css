@@ -20,6 +20,8 @@
 	width:100%;
 	height:100%;
 	background-color: rgba(0, 0, 0, 0.5);
+}
+#video-cover h1 {
 	margin-top:25%;
 }
 .navbar-transparent{
@@ -37,7 +39,7 @@
 	#video-main{
 		height:auto;
 	}
-	#video-cover{
+	#video-cover h1{
 		margin-top:5%;
 	}
 }
