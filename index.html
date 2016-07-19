@@ -7,7 +7,7 @@
 <script src="https://player.vimeo.com/api/player.js"></script>
 <script src="/assets/jquery.js"></script>
 <script src="/assets/bootstrap.min.js"></script>
-<nav class="navbar navbar-default navbar-fixed-top navbar-black">
+<nav class="navbar navbar-default navbar-fixed-top navbar-transparent">
     <div class="container">
         <div class="navbar-header">
           <a href="/" class="navbar-brand">Hosain</a>
@@ -42,5 +42,9 @@
 	var iframe = $('#video-main');
     var player = new Vimeo.Player(iframe);
     //player.play();
+
+    $('#video-cover').click(function(e){
+    	$('#video-cover').fadeOut('fast');
+    });
 </script>
 </html>
