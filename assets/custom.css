@@ -11,13 +11,14 @@
 
 #video-main{
 	width:100%;
+	height:auto;
 }
 #video-cover {
 	top:0;
 	position:absolute;
 	width:100%;
 	height:100%;
-	background-color: rgba(0, 0, 0, 0.3);
+	background-color: rgba(0, 0, 0, 0.5);
 }
 //non mobile
 @media(min-width:992px) {
@@ -25,7 +26,7 @@
 		min-height:100vh;
 	}
 	#video-main{
-		min-height:100%;
+		height:100%;
 	}
 }
 .navbar-transparent{
