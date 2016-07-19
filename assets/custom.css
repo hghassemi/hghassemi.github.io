@@ -1,0 +1,22 @@
+.center{
+	text-align: center;
+}
+.jumbotron{
+	background-size:100%;
+	background-repeat: no-repeat;
+	color:white;
+	opacity:0.9;
+	margin-bottom:0;
+}
+
+@media(min-width:992px) {
+	.jumbotron{
+		min-height:100vh;
+	}
+}
+.navbar-transparent{
+	background:transparent;
+}
+.navbar-dark{
+	background:rgb(51, 51, 51);
+}
