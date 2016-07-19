@@ -41,10 +41,10 @@
 <script>
 	var iframe = $('#video-main');
     var player = new Vimeo.Player(iframe);
-    //player.play();
 
     $('#video-cover').click(function(e){
     	$('#video-cover').fadeOut('fast');
+    	player.play();
     });
 </script>
 </html>
