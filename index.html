@@ -28,14 +28,18 @@
 
 <body>
 <div class="jumbotron">
-      <video autoplay loop muted id="video-bg">
+      <video id="video-bg">
 
         <source src="http://demosthenes.info/assets/videos/polina.mp4" type="video/mp4"/>
      
       </video>
 	<!-- <iframe src="https://player.vimeo.com/video/76979871" id="video-main" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> -->
 
-	<div id="video-cover"><h1 class="center">Hosain</h1></div>
+	<div id="video-cover">
+        <h1 class="center">Hosain</h1>
+        <img class="img-center" width="80px" src="assets/play-circle.png">
+
+    </div>
 </div>
 <section id="about">
     <div class="container">
@@ -80,23 +84,18 @@
 </section>
 </body>
 <script>
-	//var iframe = $('#video-main');
-    //var player = new Vimeo.Player(iframe);
-
     $('#video-cover').css('height', $('.jumbotron').height());
 
     $('#video-cover').click(function(e){
     	$('#video-cover').fadeOut('fast');
-    	//player.play();
+        document.getElementById('video-bg').play();
     });
 
     $(window).scroll(function(e){
-        if(window.scrollY > 0) {
-            // $('.navbar').addClass('navbar-black')
+        if(window.scrollY > 20) {
              $('.navbar').removeClass('navbar-transparent')
         }
         else {
-            // $('.navbar').removeClass('navbar-black')
              $('.navbar').addClass('navbar-transparent')
         }
     });
