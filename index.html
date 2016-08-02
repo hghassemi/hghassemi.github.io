@@ -1,12 +1,12 @@
 <html>
 <header>
 <title>Hosain</title>
-<link rel="stylesheet" href="/assets/bootstrap.min.css">
-<link rel="stylesheet" href="/assets/custom.css">
+<link rel="stylesheet" href="assets/bootstrap.min.css">
+<link rel="stylesheet" href="assets/custom.css">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <script src="https://player.vimeo.com/api/player.js"></script>
-<script src="/assets/jquery.js"></script>
-<script src="/assets/bootstrap.min.js"></script>
+<script src="assets/jquery.js"></script>
+<script src="assets/bootstrap.min.js"></script>
 <nav class="navbar navbar-default navbar-fixed-top navbar-transparent">
     <div class="container">
         <div class="navbar-header">
@@ -28,23 +28,75 @@
 
 <body>
 <div class="jumbotron">
-	<iframe src="https://player.vimeo.com/video/76979871" id="video-main" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+      <video autoplay loop muted id="video-bg">
+
+        <source src="http://demosthenes.info/assets/videos/polina.mp4" type="video/mp4"/>
+     
+      </video>
+	<!-- <iframe src="https://player.vimeo.com/video/76979871" id="video-main" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> -->
 
 	<div id="video-cover"><h1 class="center">Hosain</h1></div>
 </div>
-<div class="container">
-	<section id="#about">
-		About Me
-	</section>
-</div>
+<section id="about">
+    <div class="container">
+    	<h1>About Me</h1>
+        <div style="padding-left:10%;">
+            <h6>Hi, my name is Hosain...</h6>
+        </div>
+    </div>
+</section>
+<section id="featured">
+    <div class="container">
+        <h1>Featured Videos</h1>
+        <div class="row">
+            <div class="col-sm-8">
+                <div class="videoWrapper">
+                    <iframe width="560" height="349" src="http://www.youtube.com/embed/n_dZNLr2cME?rel=0&hd=1" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="col-sm-4">
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-sm-4">
+            </div>
+            <div class="col-sm-8">
+                <div class="videoWrapper">
+                    <iframe width="560" height="349" src="http://www.youtube.com/embed/n_dZNLr2cME?rel=0&hd=1" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 </body>
 <script>
-	var iframe = $('#video-main');
-    var player = new Vimeo.Player(iframe);
+	//var iframe = $('#video-main');
+    //var player = new Vimeo.Player(iframe);
+
+    $('#video-cover').css('height', $('.jumbotron').height());
 
     $('#video-cover').click(function(e){
     	$('#video-cover').fadeOut('fast');
-    	player.play();
+    	//player.play();
+    });
+
+    $(window).scroll(function(e){
+        if(window.scrollY > 0) {
+            // $('.navbar').addClass('navbar-black')
+             $('.navbar').removeClass('navbar-transparent')
+        }
+        else {
+            // $('.navbar').removeClass('navbar-black')
+             $('.navbar').addClass('navbar-transparent')
+        }
+    });
+
+    $(window).resize(function(e){
+        $('#video-cover').css('height', $('.jumbotron').height());
+    });
+     $('#video-bg').resize(function(e){
+        $('#video-cover').css('height', $('.jumbotron').height());
     });
 </script>
 </html>
