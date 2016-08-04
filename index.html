@@ -181,11 +181,27 @@
     //navbar colors
     $(window).scroll(function(e){
         if(window.scrollY > 20) {
-             $('.navbar').removeClass('navbar-transparent')
+             $('.navbar').removeClass('navbar-transparent');
         }
         else {
-             $('.navbar').addClass('navbar-transparent')
+             $('.navbar').addClass('navbar-transparent');
         }
+    });
+    $('.navbar-collapse ul li a').click(function() {
+        $('.navbar-toggle:visible').click();
+    });
+    $('.navbar-toggle:visible').click(function() {
+        console.log("navbar clicked");
+        setTimeout(function(){
+            if($(".navbar-collapse").attr("aria-expanded") == "true"){
+                $('.navbar').removeClass('navbar-transparent');
+            }else if(window.scrollY > 20) {
+                $('.navbar').removeClass('navbar-transparent');
+            }
+            else {
+                $('.navbar').addClass('navbar-transparent');
+            }
+        }, 75);
     });
 
     //play or pause on video
@@ -221,5 +237,6 @@
         window.scrollTo(0, qualPos);
         $('#qual-menu').css('margin-top', 0);
     })
+
 </script>
 </html>
