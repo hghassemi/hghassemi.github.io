@@ -57,11 +57,11 @@ video {display: block;}
 }
 
 .desc-left {
-	border-right:1px solid #eeeeee;
+	border-right:1px dashed #00a0ff;
 	border-left:none;
 }
 .desc-right {
-	border-left:1px solid #eeeeee;
+	border-left:1px dashed #00a0ff;
 }
 
 .videoWrapper {
@@ -95,7 +95,7 @@ section h1 {
 		margin-top:75px;
 	}
 	.desc-left {
-		border-left:1px solid #eeeeee;
+		border-left:1px dashed #00a0ff;
 		border-right:none;
 	}
 }

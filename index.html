@@ -20,6 +20,7 @@
         <div class="navbar-collapse collapse" id="navbar-main">
             <ul class="nav navbar-nav">
                 <li><a class="page-scroll" href="#about">About</a></li>
+                <li><a class="page-scroll" href="#featured">Featured Videos</a></li>
         </ul>
         </div>
     </div>
@@ -37,29 +38,34 @@
 
 	<div id="video-cover">
         <h1 class="center">Hosain</h1>
-        <img class="img-center" width="80px" src="assets/play-circle.png">
+        <img class="img-center" width="50px" src="assets/play-circle.png">
 
     </div>
 </div>
 <section id="about">
     <div class="container">
     	<h1>About Me</h1>
-        <div style="padding-left:10%;">
-            <h6>Hi, my name is Hosain...</h6>
-        </div>
+        <blockquote class="desc-right">
+            <p>Dedicated and accomplished Molecular Biology and Biochemistry Student with a background
+    shadowing physicians and trauma experience working as an EMT. Expertise in web development, 3-D
+    modeling software, and visual design for the purpose of creating large-scale educational, artistic, and
+    story-based projects. Proven success as a leader, active team member, entrepreneur, and mentor.
+    Excellent communications abilities including presentation skill, and a devotion to volunteerism.</h5>
+            </p>
+        </blockquote>
     </div>
 </section>
 <section id="featured">
     <div class="container">
         <h1>Featured Videos</h1>
         <div class="row">
-            <div class="col-sm-6 col-xs-12 pull-right">
+            <div class="col-sm-6 col-xs-12 col-sm-push-6">
                 <h3>Video 1</h3>
                 <blockquote class="desc-right">
                   <p>text</p>
                 </blockquote>
             </div>
-            <div class="col-sm-6">
+            <div class="col-sm-6 col-xs-12 col-sm-pull-6">
                 <div class="videoWrapper">
                     <iframe width="560" height="349" src="http://www.youtube.com/embed/n_dZNLr2cME?rel=0&hd=1" frameborder="0" allowfullscreen></iframe>
                 </div>
@@ -84,13 +90,16 @@
 </section>
 </body>
 <script>
+    //set cover to proper height on load
     $('#video-cover').css('height', $('.jumbotron').height());
 
+    //close video cover
     $('#video-cover').click(function(e){
     	$('#video-cover').fadeOut('fast');
         document.getElementById('video-bg').play();
     });
 
+    //navbar colors
     $(window).scroll(function(e){
         if(window.scrollY > 20) {
              $('.navbar').removeClass('navbar-transparent')
@@ -100,10 +109,22 @@
         }
     });
 
+    //play or pause on video
+    $('#video-bg').click(function(){
+        var video = document.getElementById('video-bg');
+        if(video.paused) {
+            video.play();
+        }
+        else {
+            video.pause();
+        }
+    });
+
+    //adjust video cover size if anything is resized
     $(window).resize(function(e){
         $('#video-cover').css('height', $('.jumbotron').height());
     });
-     $('#video-bg').resize(function(e){
+    $('#video-bg').resize(function(e){
         $('#video-cover').css('height', $('.jumbotron').height());
     });
 </script>
