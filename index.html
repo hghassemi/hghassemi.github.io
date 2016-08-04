@@ -226,6 +226,11 @@
     //vertical nav tabs
     var qualPos = $('#qualifications').position()['top'];
     var contactPos = $('#contact').position()['top'];
+    $(window).resize(function(e){
+        //reset on resize
+        var qualPos = $('#qualifications').position()['top'];
+        var contactPos = $('#contact').position()['top'];
+    });
     $(window).scroll(function(){
         var scrollPos = window.scrollY;
 
