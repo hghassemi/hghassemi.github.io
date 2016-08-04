@@ -99,4 +99,24 @@ section h1 {
 		border-right:none;
 	}
 }
+.nav-tabs{
+	border:none;
+}
+.nav-tabs>li>a{
+	border-radius:0;
+	color:#777777;
+}
+.nav-tabs>li>a:after{
+	content: '>';
+	right:10px;
+	position:absolute;
+}
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:hover, .nav-tabs>li.active>a:focus{
+	border: none;
+	background-color: #D9EDF7;
+}
+
+.nav-tabs>li{
+	width:100%;
+	margin:0;
 }

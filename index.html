@@ -1,9 +1,11 @@
+<!DOCTYPE html>
 <html>
 <header>
 <title>Hosain</title>
 <link rel="stylesheet" href="assets/bootstrap.min.css">
 <link rel="stylesheet" href="assets/custom.css">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
 <script src="https://player.vimeo.com/api/player.js"></script>
 <script src="assets/jquery.js"></script>
 <script src="assets/bootstrap.min.js"></script>
@@ -21,6 +23,7 @@
             <ul class="nav navbar-nav">
                 <li><a class="page-scroll" href="#about">About</a></li>
                 <li><a class="page-scroll" href="#featured">Featured Videos</a></li>
+                <li><a class="page-scroll" href="#qualifications">Qualifications</a></li>
         </ul>
         </div>
     </div>
@@ -88,6 +91,30 @@
         </div>
     </div>
 </section>
+<section id="qualifications">
+<div class="container">
+<h1>Qualifications</h1>
+<!-- Mobile menu -->
+<div class="visible-xs visible-sm" style='background-color:#D9EDF7'>
+Mobile
+</div>
+<!-- Desktop menu -->
+<div class="hidden-xs hidden-sm">
+<ul class="nav nav-tabs col-md-4">
+  <li class="active"><a href="#education" data-toggle="tab" aria-expanded="true">Education</a></li>
+  <li class=""><a href="#experience" data-toggle="tab" aria-expanded="false">Experience</a></li>
+</ul>
+<div id="myTabContent" class="tab-content col-md-8">
+  <div class="tab-pane fade active in" id="education">
+    <p>Education info</p>
+  </div>
+  <div class="tab-pane fade" id="experience">
+    <p>Experience info</p>
+  </div>
+</div>
+</div>
+</div>
+<br><br>
 </body>
 <script>
     //set cover to proper height on load
