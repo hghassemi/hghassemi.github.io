@@ -120,7 +120,8 @@ a{
 .nav-tabs>li.active>a, .nav-tabs>li.active>a:hover, .nav-tabs>li.active>a:focus{
 	border: none;
 	/*background-color: #D9EDF7;*/
-	background-color: #97D7FC;
+	/*background-color: #97D7FC;*/
+	background-color: #A4DCFC;
 }
 
 .nav-tabs>li{
