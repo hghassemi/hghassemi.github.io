@@ -99,6 +99,9 @@ section h1 {
 		border-right:none;
 	}
 }
+a{
+	color:#00a0ff;
+}
 .nav-tabs{
 	border:none;
 }
