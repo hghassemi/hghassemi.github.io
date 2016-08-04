@@ -51,11 +51,9 @@
     <div class="container">
     	<h1>About Me</h1>
         <blockquote class="desc-right">
-            <p>Dedicated and accomplished Molecular Biology and Biochemistry Student with a background
-    shadowing physicians and trauma experience working as an EMT. Expertise in web development, 3-D
-    modeling software, and visual design for the purpose of creating large-scale educational, artistic, and
-    story-based projects. Proven success as a leader, active team member, entrepreneur, and mentor.
-    Excellent communications abilities including presentation skill, and a devotion to volunteerism.</h5>
+            <p>
+                <h5>
+                Molecular Biology and Biochemistry Student with a background shadowing physicians and trauma experience working as an EMT. Expertise in web development, 3-D modeling software, and visual design for the purpose of creating large-scale educational, artistic, and story-based projects. </h5>
             </p>
         </blockquote>
     </div>
@@ -97,7 +95,7 @@
 <section id="qualifications">
     <br><br>
     <div class="container">
-        <h1>Qualifications</h1>
+        <h1 id="qual-header">Qualifications</h1>
         <!-- Mobile menu -->
         <div class="visible-xs">
             
@@ -110,30 +108,32 @@
             </ul>
             <div id="myTabContent" class="tab-content col-sm-8 qual-content">
               <div class="tab-pane fade active in" id="education">
-                <p>Education info</p>
-                <p>Education info</p>
-                <p>Education info</p>
-                <p>Education info</p>
-                <p>Education info</p>
-                <p>Education info</p>
-                <p>Education info</p>
-                <p>Education info</p>
-                <p>Education info</p>
-                <p>Education info</p>
-                <p>Education info</p>
-                <p>Education info</p>
-                <p>Education info</p>
-                <p>Education info</p>
-                <p>Education info</p>
-                <p>Education info</p>
-                <p>Education info</p>
-                <p>Education info</p>
-                <p>Education info</p><p>Education info</p>
-                <p>Education info</p>
-                <p>Education info</p>
+                <p>MIDDLEBURY COLLEGE, Middlebury, Vermont<p>
+                <p><b>Bachelor of Science, Molecular Biology & Biochemistry, 2017</b></p>
+                <p> - Secured 5000$ of funding for sustainable clean water initiative for 7,500 people in Kagando, Uganda</p>
+                <p> - Worked to develop 30 minute long animation to accompany a cello concerto set to tour the US (2016)</p>
+
+                <br>
+
+                <p>PEMBROKE HIGH SCHOOL, Kansas City, Missouri<p>
+                <p><b>Diploma Earned, 2013</b></p>
+                <p>Envirothon - North American Champion, 2012</p>  
+                <p> - Captain of the five-person environmental science team chosen out of 500,000 total participants to win a shared prize of $25,000 for innovation in practical local green problem-solving</p>
+
+
               </div>
               <div class="tab-pane fade" id="experience">
-                <p>Experience info</p>
+                <p>MIDDLEBURY COLLEGE, Middlebury, Vermont</p>                                                                                                                                     
+                <p><b>Research Assistant in Biochemistry Lab</b></p>
+                <p> - Built scientifically accurate 3D-Computer animations of ongoing research into Acetyl-transferase and Phosphofructokinase activity in Borrelia Burgdorferi (Video in production)</p>
+
+                <br>
+
+                <p>GLOBAL HEALTHY LIVING FOUNDATION, Upper Nyack New York</p>
+                <p><b>Summer Research and Advocacy Intern</b></p>
+                <p> - Co-authored manuscript with Dr. Ben Nowell outlining and interrupting results from organizations patient driven research app ‘Arthritis Power”</p>
+                <p>Worked to produce infographics and 3D-animate films describing various research and advocacy based initiatives</p>
+
               </div>
             </div>
         </div>
@@ -226,15 +226,17 @@
     //vertical nav tabs
     var qualPos = $('#qualifications').position()['top'];
     var contactPos = $('#contact').position()['top'];
+    var qualMenuHeight = $('#qual-menu').height();
     $(window).resize(function(e){
         //reset on resize
         var qualPos = $('#qualifications').position()['top'];
         var contactPos = $('#contact').position()['top'];
+        var qualMenuHeight = $('#qual-menu').height();
     });
     $(window).scroll(function(){
         var scrollPos = window.scrollY;
 
-        if(scrollPos > qualPos &&  scrollPos-qualPos < $('.qual-content').height()){
+        if(scrollPos > qualPos &&  scrollPos-qualPos < $('.qual-content').height() - qualMenuHeight){
             $('#qual-menu').css('margin-top', scrollPos-qualPos);
         }
     });
