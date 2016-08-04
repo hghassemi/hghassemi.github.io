@@ -47,7 +47,7 @@ video {display: block;}
 	border:none;
 }
 .navbar-transparent  .navbar-header>a{
-	color:white !important;
+	color:white;
 }
 .navbar-transparent .navbar-nav>li>a{
 	color:white;
@@ -119,7 +119,8 @@ a{
 }
 .nav-tabs>li.active>a, .nav-tabs>li.active>a:hover, .nav-tabs>li.active>a:focus{
 	border: none;
-	background-color: #D9EDF7;
+	/*background-color: #D9EDF7;*/
+	background-color: #97D7FC;
 }
 
 .nav-tabs>li{
