@@ -101,6 +101,10 @@ section h1 {
 		border-left:1px dashed #00a0ff;
 		border-right:none;
 	}
+	.tab-content>.tab-pane {
+		display:block;
+		opacity:1;
+	}
 }
 a{
 	color:#00a0ff;
