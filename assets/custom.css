@@ -133,3 +133,23 @@ a{
 	margin:0;
 }
 
+.details {
+	border-top: 1px dashed #00a0ff;
+	border-left: 1px dashed #00a0ff;
+	padding: 5px 0 0px 10px;
+	margin-bottom:15px;
+}
+
+.short-hr {
+	border-bottom: 1px dashed #00a0ff;
+	width:40px;
+	margin:auto;
+
+}
+/*@media(max-width:767px) {
+	.details {
+		border-bottom: 1px dashed #00a0ff;
+		border-top:none;
+	}	
+}
+*/
